@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="Css\shops.css">
+   <link rel="icon" href="pictures\favicon of shopping bag (1).png" />
+    <title>Shops</title>
+</head>
+<body>
+    <header class="me">
+        <a href="map.html">Map</a>
+        <a href="shops.html">Shops</a>
+        <a href="Banks.html">Banks</a>
+        <a href="specialoffers.html">Special Offers</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="">Facilities</a>
+    </header>
+      <body>
+        
+      
+    <h1>List of Shops</h1>
+    <div class="search-wrapper">
+      <label for="search"></label>
+      <form>
+        <input
+          type="text"
+          id="search"
+          placeholder="Search shops"
+          onkeyup="search()"
+        />
+      </form>
+    </div>
+    <div class="bank-cards" id="bank-cards">
+      <div class="background">
+        <div class="card">
+          <div class="yo">
+            <a href="https://www.adidas.co.uk/" class="yo">
+          
+            <h2>Adidas</h2></a>
+          </div>
+            <img src="pictures\shop1.jpg" alt="" />
+        </div>
+           
+          </div> 
+        </div>
+      <div class="background1">
+        <div class="card">
+          <div class="yo">
+          <a href="https://www2.hm.com/en_gb/index.html"
+          class="yo" ><h2>H&M</h2></a>
+            </div>
+            <img src="pictures\shop2.jpg" alt="">
+          </div>
+        </div>
+      <div class="background2">
+        <div class="card">
+          <div class="yo">
+            <a href="https://www.samsung.com/uk/" class="yo"
+              ><h2>Samsung</h2></a
+            ></div>
+            <img src="pictures\shop3.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const search = () => {
+      const searchbox = document.getElementById("search").value.touppercase();
+      const Banks = document.getElementById("bank-cards");
+      const bankss = document.querySelectorAll(".card");
+      const bankname = Banks.getElementsByTagName("h2");
+
+      for (var i = 0; i < pname.length; i++) {
+        let match = bankss[i].getElementsByClassName("h2")[0];
+
+        if (match) {
+          let textvalue = match.textContent || match.innerHTML;
+
+          if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
+            bankss[i].style.display = "";
+          } else {
+            bankss[i].style.display = "none";
+          }
+        }
+      }
+    };
+  </script>
+</html>
+
+</body>
+</html>

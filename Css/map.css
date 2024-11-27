@@ -1,0 +1,29 @@
+.me a{
+    font-size: 19px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    margin-right: 40px;
+    }
+
+    .me a:hover {
+        color: white;
+        background-color: #b2bcf1;
+        font-weight: 900;
+    }
+
+header {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 100px;
+    border: none;
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    display: block;
+    justify-content: right;
+}
+
+h1{
+    text-align: center;
+}

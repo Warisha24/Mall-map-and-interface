@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Css\Banks.css" />
+    <link rel="icon" href="pictures\favicon of shopping bag (1).png" />
+    <title>Banks</title>
+  </head>
+
+  <header class="me"> 
+     <a href="map.html">Map</a>
+    <a href="shops.html">Shops</a>
+      <a href="Banks.html">Banks</a>
+    <a href="specialoffers.html">Special Offers</a>
+      <a href="contactus.html">Contact Us</a>
+    <a href="">Facilities</a>
+  </header>
+
+  <body>
+
+      <h1>List of Banks</h1>
+      <div class="search-wrapper">
+          <label for="search"></label>
+          <input type="text"
+                 id="search"
+                 placeholder="Search Banks"
+                 onkeyup="search()" />
+      </div>
+
+          <div class="bank-cards" id="bank-cards">
+              <div class="background" id="x">
+                  <div class="card">
+                      <div class="yo">
+                          <a href="https://www.natwest.com/" class="yo"><h2 class="name">NatWest</h2></a>
+                      </div>
+                      <img src="Css\pics\bank1.jpg" alt="" />
+                  </div>
+
+              </div>
+
+              <div class="background1">
+                  <div class="card">
+                      <div class="yo">
+                          <a href="https://www.santander.co.uk/"
+                             class="yo"><h2 class="name">Santander</h2></a>
+                      </div>
+                      <img src="Css\pics\Bank 2.jpg" alt="">
+                  </div>
+              </div>
+              <div class="background2">
+                  <div class="card">
+                      <div class="yo">
+                          <a href="https://www.lloydsbank.com/" class="yo"><h2 class="name">Lloyds</h2></a>
+                      </div>
+                      <img src="Css\pics\bank 3.jpg" alt="">
+                  </div>
+              </div>
+          </div>
+      
+  </body>
+  <script>
+
+      function search() {
+          const bankss = document.querySelectorAll(".bank-cards");
+          .style.display = "block";
+          bankss[1].style.display = "none";
+          bankss[2].style.display = "none";
+          return;
+      const searchbox = document.getElementById("search").value;
+      const Banks = document.getElementById("bank-cards");
+        const bankss = document.querySelectorAll(".bank-cards");
+      const bankname = Banks.getElementsByClassName(".name");
+      for (var i = 0; i < bankss.length; i++) {
+          let match = bankss[i].getElementsByClassName(".name")[0];
+         if (match == searchbox) { 
+            bankss[i].style.display = "block";
+          } else {
+            bankss[i].style.display = "none";
+        }
+      }
+    };
+  </script>
+</html>
